@@ -10,3 +10,5 @@ This template should help get you started developing with Tauri, React and Types
 
 
 # CURRENTLY UNDER DEVELOPMENT!!!!!!!!!!!!!!!
+
+For now, I’ve implemented the core "Screenshot" feature in the test project.
