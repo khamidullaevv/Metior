@@ -6,10 +6,21 @@ import "./App.css";
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
+  const [screenshotPath, setScreenshotPath] = useState("");
 
   async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
     setGreetMsg(await invoke("greet", { name }));
+  }
+
+  async function handleScreenshot() {
+    try {
+      const path = await invoke<string>("capture_screenshot");
+      setScreenshotPath(path);
+      console.log("Скриншот сохранён:", path);
+    } catch (error) {
+      console.error("Ошибка захвата:", error);
+      setScreenshotPath(`Ошибка: ${error}`);
+    }
   }
 
   return (
@@ -44,6 +55,11 @@ function App() {
         <button type="submit">Greet</button>
       </form>
       <p>{greetMsg}</p>
+
+      <div className="row">
+        <button onClick={handleScreenshot}>Сделать скриншот</button>
+      </div>
+      <p>{screenshotPath}</p>
     </main>
   );
 }
