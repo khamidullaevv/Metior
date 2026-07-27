@@ -3,7 +3,8 @@ import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 
-const [provider, setProvider] = useState("openai")
+const [provider, setProvider] = useState("openai");
+const [apiKey, setApiKey] = useState("");
 
 
 
