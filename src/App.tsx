@@ -11,9 +11,11 @@ async function handleSaveKey(){
     try {
         await invoke("save_api_key", {provider, key: apiKey});
         setSaveStatus(`Key for ${provider} saves`);
-
+        setApiKey("");
     }
-
+    catch (error) {
+        setSaveStatus(`Error ${error}`);
+    }
 }
 
 
