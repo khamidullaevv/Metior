@@ -7,7 +7,13 @@ const [provider, setProvider] = useState("openai");
 const [apiKey, setApiKey] = useState("");
 const [saveStatus, setSaveStatus] = useState("");
 
+async function handleSaveKey(){
+    try {
+        await invoke("save_api_key", {provider, key: apiKey});
 
+    }
+
+}
 
 
 function App() {
