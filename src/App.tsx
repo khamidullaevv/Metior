@@ -17,7 +17,9 @@ async function handleSaveKey(){
         setSaveStatus(`Error ${error}`);
     }
 }
-
+async function handleCheckKey(){
+    
+}
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
