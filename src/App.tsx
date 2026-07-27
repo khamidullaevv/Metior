@@ -5,6 +5,7 @@ import "./App.css";
 
 const [provider, setProvider] = useState("openai");
 const [apiKey, setApiKey] = useState("");
+const [saveStatus, setSaveStatus] = useState("");
 
 
 
