@@ -18,7 +18,11 @@ async function handleSaveKey(){
     }
 }
 async function handleCheckKey(){
-    
+    try {
+        const key = await invoke<string>("get_api_key",{provider});
+        setSaveStatus(`Key needed: ${key.slice(0, 4)}...`);
+
+    }
 }
 
 function App() {
