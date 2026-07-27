@@ -10,6 +10,7 @@ const [saveStatus, setSaveStatus] = useState("");
 async function handleSaveKey(){
     try {
         await invoke("save_api_key", {provider, key: apiKey});
+        setSaveStatus(`Key for ${provider} saves`);
 
     }
 
