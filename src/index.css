@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+    --color-amethyst-900: #47336b;
+    --color-amethyst-700: #765891;
+    --color-amethyst-500: #7f5eb8;
+    --color-amethyst-400: #9b73be;
+    --color-amethyst-300: #977a91;
+
+    --color-amethyst-dark: #47336b;
+    --color-amethyst-accent: #7f5eb8;
+    --color-amethyst-light: #9b73be;
+    --color-amethyst-muted: #977a91;
+}
