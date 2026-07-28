@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
     --color-amethyst-900: #47336b;
     --color-amethyst-700: #765891;
