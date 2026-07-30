@@ -5,10 +5,8 @@ import { Sparkles, ArrowRight } from "lucide-react";
 export const ChatInterface: React.FC = () => {
     return (
         <main className="flex-1 h-full flex flex-col bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
-            {/* Нежная фоновая подсветка для области чата */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amethyst-500/5 dark:bg-amethyst-500/10 rounded-full blur-[150px] pointer-events-none" />
 
-            {/* Хедер чата с полупрозрачным стеклом */}
             <header className="h-16 border-b border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between px-6 bg-white/60 dark:bg-slate-950/60 backdrop-blur-md z-10">
         <span className="text-sm font-medium text-slate-500 dark:text-slate-400 flex items-center gap-2.5">
           <span className="relative flex h-2.5 w-2.5">
@@ -19,7 +17,6 @@ export const ChatInterface: React.FC = () => {
         </span>
             </header>
 
-            {/* Область сообщений */}
             <div className="flex-1 overflow-y-auto p-6 md:p-8 space-y-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 15 }}
@@ -36,11 +33,9 @@ export const ChatInterface: React.FC = () => {
                 </motion.div>
             </div>
 
-            {/* Поле ввода с плавным градиентным бордером при фокусе */}
             <div className="p-4 md:p-6 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/40 dark:bg-slate-950/40 backdrop-blur-lg relative z-10">
                 <div className="max-w-4xl mx-auto relative group">
 
-                    {/* Градиентный светящийся контур при наведении/фокусе */}
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-amethyst-500 to-amethyst-300 rounded-2xl blur opacity-0 group-focus-within:opacity-60 group-hover:opacity-30 transition duration-500" />
 
                     <div className="relative flex items-center gap-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-2.5 shadow-sm">
