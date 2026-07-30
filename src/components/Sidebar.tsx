@@ -19,7 +19,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isDark, toggleTheme }) => {
             className="h-full bg-slate-100/70 dark:bg-slate-900/70 backdrop-blur-xl border-r border-slate-200/80 dark:border-slate-800/80 flex flex-col justify-between p-3 z-20 select-none"
         >
             <div>
-                {/* Заголовок */}
                 <div className="flex items-center justify-between p-2 mb-6 h-10 overflow-hidden">
                     <AnimatePresence mode="wait">
                         {isOpen && (
@@ -48,7 +47,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isDark, toggleTheme }) => {
                     </button>
                 </div>
 
-                {/* Навигация */}
                 <nav className="flex flex-col gap-1.5">
                     <SidebarItem icon={MessageSquare} label="Чат с ИИ" active isOpen={isOpen} />
                     <SidebarItem icon={Camera} label="Скриншот экрана" isOpen={isOpen} />
@@ -80,7 +78,6 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ icon: Icon, label, active, is
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
             } ${!isOpen && "justify-center"}`}
         >
-            {/* Мягкий градиент подложки активного пункта */}
             {active && (
                 <motion.div
                     layoutId="activeTab"
