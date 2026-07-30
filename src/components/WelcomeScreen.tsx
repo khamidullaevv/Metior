@@ -16,11 +16,9 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="h-full w-full flex flex-col items-center justify-center relative p-6 select-none overflow-hidden"
         >
-            {/* 1. Живые аметистовые градиентные пятна (Mesh Glow) */}
             <div className="absolute w-[600px] h-[600px] bg-gradient-to-tr from-amethyst-900 via-amethyst-500 to-amethyst-400 opacity-20 dark:opacity-35 rounded-full blur-[140px] pointer-events-none -z-10 animate-glow" />
             <div className="absolute -top-20 -right-20 w-[400px] h-[400px] bg-gradient-to-br from-amethyst-400 to-amethyst-700 opacity-15 dark:opacity-25 rounded-full blur-[120px] pointer-events-none -z-10 animate-glow" style={{ animationDelay: "-4s" }} />
 
-            {/* 2. Иконка с градиентной рамкой и эффектом стекла */}
             <motion.div
                 initial={{ y: -30, opacity: 0, rotate: -10 }}
                 animate={{ y: 0, opacity: 1, rotate: 0 }}
@@ -33,7 +31,6 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
                 </div>
             </motion.div>
 
-            {/* 3. Заголовок с насыщенным 3D-градиентным текстом */}
             <motion.h1
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -43,7 +40,6 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
                 Привет! Как дела?
             </motion.h1>
 
-            {/* 4. Подзаголовок */}
             <motion.p
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -53,7 +49,6 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
                 Я <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-amethyst-500 to-amethyst-400">Metior</span> — твой кристальный AI-помощник.
             </motion.p>
 
-            {/* 5. Кнопка с живым градиентом и плавным откликом */}
             <motion.button
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -63,10 +58,8 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
                 onClick={onStart}
                 className="mt-12 group relative inline-flex items-center gap-3 px-10 py-5 rounded-2xl font-semibold text-lg text-white shadow-xl shadow-amethyst-500/25 cursor-pointer overflow-hidden"
             >
-                {/* Анимированный градиентный фон кнопки */}
                 <div className="absolute inset-0 bg-gradient-to-r from-amethyst-700 via-amethyst-500 to-amethyst-400 group-hover:scale-105 transition-transform duration-500" />
 
-                {/* Блик при наведении */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
 
                 <span className="relative z-10">Начать работу</span>
