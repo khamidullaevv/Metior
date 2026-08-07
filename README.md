@@ -16,5 +16,5 @@ Screenshot added for App.tsx
 # CURRENTLY UNDER DEVELOPMENT!!!!!!!!!!!!!!!
 This is an open source project at the moment. I want to finish it completely by the end of the year or by spring next year.
 For now, I’ve implemented the core "Screenshot" feature in the test project.
-
+development has been postponed until autumn for now
 # On my latop in windows dont working project i think have wsl or i can change OS
